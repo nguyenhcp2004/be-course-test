@@ -1,0 +1,92 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Register
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .register-container {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 350px;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: #555;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .login-link {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 14px;
+      }
+      .login-link a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .login-link a:hover {
+        text-decoration: underline;
+      }
+
+  body
+    .register-container
+      h2 Register
+      form(method="POST" action="/register")
+        label(for="username") Username
+        input#username(type="text" name="username" required)
+
+        label(for="email") Email
+        input#email(type="email" name="email" required)
+
+        label(for="password") Password
+        input#password(type="password" name="password" required)
+
+        label(for="confirmPassword") Confirm Password
+        input#confirmPassword(type="password" name="confirmPassword" required)
+
+        button(type="submit") Register
+
+      .login-link
+        | Already have an account? 
+        a(href="/login") Login here

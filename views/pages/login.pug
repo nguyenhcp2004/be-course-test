@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Login
+    link(rel="stylesheet", href="/styles/login.css")
+  body
+    .container
+      .login-box
+        h2 Login
+        form(method="POST", action="/login")
+          label(for="email") Email
+          input#email(type="email", name="email", required, placeholder="Enter your email")
+
+          label(for="password") Password
+          input#password(type="password", name="password", required, placeholder="Enter your password")
+
+          button(type="submit") Login
+
+        .register-link
+          p Don't have an account?
+            a(href="/register") Register
