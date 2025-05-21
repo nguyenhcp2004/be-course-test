@@ -11,9 +11,13 @@ app.use(bodyParser.json())
 app.use(morgan('dev'))
 connectDB()
 
+// các file static
 app.use(express.static('public'))
 
+// các chỗ thư mục view làm việc
 app.set('views', `${__dirname}/views`)
+
+// các sử dụng view engine
 app.set('view engine', 'pug')
 
 // app.get('/login', (req, res) => {

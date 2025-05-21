@@ -1,0 +1,47 @@
+doctype html
+html(lang="vi")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Trang chủ - POD Booking
+    link(rel="stylesheet", href="/styles/main.css")
+  body
+    header
+      nav.navbar
+        .logo
+          a(href="/") POD Booking
+        ul.nav-links
+          li: a(href="/about") Giới thiệu
+          li: a(href="/rooms") Phòng
+          li: a(href="/services") Dịch vụ
+          li: a(href="/contact") Liên hệ
+          li: a(href="/login") Đăng nhập
+
+    main
+      .hero
+        h1 Chào mừng đến với POD Booking
+        p Tìm kiếm và đặt không gian làm việc lý tưởng cho bạn.
+        a.btn(href="/rooms") Đặt phòng ngay
+
+      .features
+        h2 Tính năng nổi bật
+        .feature-grid
+          .feature
+            img(src="/images/calendar.svg", alt="Đặt lịch")
+            h3 Đặt phòng dễ dàng
+            p Đặt theo giờ, ngày hoặc tuần – chỉ với vài cú click.
+          .feature
+            img(src="/images/payment.svg", alt="Thanh toán")
+            h3 Thanh toán linh hoạt
+            p Hỗ trợ thẻ, ví điện tử, và chuyển khoản ngân hàng.
+          .feature
+            img(src="/images/support.svg", alt="Hỗ trợ")
+            h3 Hỗ trợ tận tình
+            p Luôn sẵn sàng hỗ trợ bạn trong suốt quá trình sử dụng.
+
+      .cta
+        h2 Sẵn sàng trải nghiệm?
+        a.btn(href="/signup") Đăng ký ngay
+
+    footer
+      p © 2025 POD Booking. All rights reserved.
